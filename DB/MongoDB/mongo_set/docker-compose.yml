@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+    mongo:
+        build:
+          context: .
+          dockerfile: Dockerfile_mongo
+        container_name: mongo_scrapy
+        networks:
+            - internal
+        restart: always
+        ports:
+          - 27017:27017
+        volumes:
+          - "database:/data/db"
+
+networks:
+  internal:
+volumes:
+  database:

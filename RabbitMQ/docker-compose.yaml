@@ -1,0 +1,16 @@
+version: '2'
+
+services: 
+  rabbitmq:
+    image: bitnami/rabbitmq:latest
+    container_name: my-rabbitmq
+    working_dir: /code
+    command: sh init.sh
+    ports:
+      - 15672:15672
+      - 5672:5672
+    restart: always
+    volumes:
+      - ./data:/var/lib/rabbitmq
+      - ./logs:/var/log/rabbitmq
+      - ./code:/code

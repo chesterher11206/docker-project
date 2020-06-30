@@ -1,0 +1,7 @@
+FROM mongo
+
+WORKDIR /scripts
+COPY init_mongo.sh .
+EXPOSE 27017
+
+CMD ["mongod"]

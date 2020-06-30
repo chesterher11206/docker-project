@@ -1,0 +1,12 @@
+version: '3'
+services:
+    jenkins:
+          build: ./jenkins
+          restart: always
+          ports:
+              - "8080:8080"
+              - "50000:50000"
+          volumes:
+              - jenkins_data:/var/jenkins_home
+volumes:
+    jenkins_data:
