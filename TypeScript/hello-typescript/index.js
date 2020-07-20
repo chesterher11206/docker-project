@@ -55,8 +55,6 @@ console.log(circle.area);
 circle.area = 3.14 * (Math.pow(5, 2));
 console.log(circle.area);
 console.log(circle.radius);
-circle.test = function () { console.log('yes'); };
-circle.test();
 var LazySingletonPerson = /** @class */ (function () {
     function LazySingletonPerson(name, age, hasPet) {
         this.name = name;
